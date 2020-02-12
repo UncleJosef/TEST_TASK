@@ -1,0 +1,11 @@
+﻿-- Сделан один на все
+--CREATE TRIGGER [TRG_TRACKS_DELETE]
+--	ON [PLAYER].[T_TRACKS]
+--	AFTER DELETE
+--	AS
+--	BEGIN
+--		SET NOCOUNT ON;
+--		INSERT INTO [PLAYER].T_TRACK_LOG (OPERATION_TYPE_ID, TRACK_ID, CONTENT)
+--			SELECT 3, deleted.ID, N'Добавлен трек № '+CAST(deleted.NUMBER AS NVARCHAR(12))+N' с названием '+deleted.NAME
+--				FROM deleted
+--	END

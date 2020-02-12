@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="be0ed8c2-61fe-466a-84c5-bdb357142102" ChangeDateTime="02/11/2020 20:15:52">
+    <Property Name="ElementName" Value="[PLAYER].[T_TRACKS].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[PLAYER].[T_TRACKS]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="27b71abb-761c-472b-8a83-a7017ecca7bd" ChangeDateTime="02/12/2020 08:17:30">
+    <Property Name="ElementName" Value="[TEST].[T_TEST_RESULT].[TRACK_NUMBER]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TEST].[T_TEST_RESULT]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TRACK_ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1453301e-2454-4405-ae70-75a154d39b33" ChangeDateTime="02/12/2020 08:26:11">
+    <Property Name="ElementName" Value="[TEST].[T_TEST_RESULT].[TRACK_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TEST].[T_TEST_RESULT]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TRACK_NAME" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a983a0a0-e1ec-4e89-924a-b9b68b2b1763" ChangeDateTime="02/12/2020 08:37:42">
+    <Property Name="ElementName" Value="[dbo].[T_TRACK_LOG].[OPERATION]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[T_TRACK_LOG]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OPERATION_ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="90145a5e-3bd9-4504-9db9-b08867251ff1" ChangeDateTime="02/12/2020 08:40:21">
+    <Property Name="ElementName" Value="[dbo].[T_TRACK_LOG].[OPERATION_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[T_TRACK_LOG]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OPERATION_TYPE_ID" />
+  </Operation>
+</Operations>

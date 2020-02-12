@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>TEST_TASK</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{4a4b96f3-3531-46a3-8117-c865985e4682}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>TEST_TASK</RootNamespace>
+    <AssemblyName>TEST_TASK</AssemblyName>
+    <ModelCollation>1049,CS</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Cyrillic_General_100_CS_AS</DefaultCollation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="STARTUP" />
+    <Folder Include="PLAYER" />
+    <Folder Include="TEST" />
+    <Folder Include="PLAYER\FK" />
+    <Folder Include="PLAYER\TRIGGERS" />
+    <Folder Include="PLAYER\FUNCTION" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RM.txt" />
+    <None Include="EXEC_TEST.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="TEST\_TEST.sql" />
+    <Build Include="PLAYER\_PLAYER.sql" />
+    <Build Include="STARTUP\_STARTUP.sql" />
+    <Build Include="TEST\T_TEST_RESULT.sql" />
+    <Build Include="PLAYER\T_TRACKS.sql" />
+    <Build Include="PLAYER\SP_GET_TRACK.sql" />
+    <Build Include="STARTUP\SP_STARTUP.sql" />
+    <Build Include="TEST\SP_TEST.sql" />
+    <Build Include="PLAYER\T_TRACK_LOG.sql" />
+    <Build Include="PLAYER\T_OPERATION_TYPES.sql" />
+    <Build Include="PLAYER\FK\FK_LOG_TYPE_OPERATION.sql" />
+    <Build Include="PLAYER\TRIGGERS\TRG_TRACKS_INSERT.sql" />
+    <Build Include="PLAYER\TRIGGERS\TRG_TRACKS_DELETE.sql" />
+    <Build Include="PLAYER\TRIGGERS\TRG_TRACKS_UPDATE.sql" />
+    <Build Include="PLAYER\FUNCTION\F_LOG_STRING.sql" />
+    <Build Include="PLAYER\T_STATE.sql" />
+    <Build Include="PLAYER\TRIGGERS\T_TRACK_COUNTER.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="TEST_TASK.refactorlog" />
+  </ItemGroup>
+</Project>
