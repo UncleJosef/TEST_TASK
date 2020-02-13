@@ -67,6 +67,7 @@
   <ItemGroup>
     <None Include="RM.txt" />
     <None Include="EXEC_TEST.sql" />
+    <None Include="STARTUP_SCRIPT.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="TEST\_TEST.sql" />
@@ -85,7 +86,7 @@
     <Build Include="PLAYER\TRIGGERS\TRG_TRACKS_UPDATE.sql" />
     <Build Include="PLAYER\FUNCTION\F_LOG_STRING.sql" />
     <Build Include="PLAYER\T_STATE.sql" />
-    <Build Include="PLAYER\TRIGGERS\T_TRACK_COUNTER.sql" />
+    <Build Include="PLAYER\T_TRACK_COUNTER.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TEST_TASK.refactorlog" />
