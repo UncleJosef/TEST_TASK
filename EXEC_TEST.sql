@@ -14,4 +14,4 @@ EXEC [STARTUP].SP_STARTUP 0.8832;
 -- 0 - перебор
 -- 1 - случайный выбор
 
-EXEC [TEST].[SP_TEST] 10,1;
+EXEC [TEST].[SP_TEST] 10,0;
